@@ -223,7 +223,7 @@ cat > "$T/Extra/org.chameleon.Boot.plist" <<'PLIST'
 <plist version="1.0">
 <dict>
 	<key>Kernel Flags</key>
-	<string>cpus=1 arch=i386</string>
+	<string>arch=i386</string>
 	<key>Timeout</key>
 	<string>0</string>
 	<key>Quiet Boot</key>

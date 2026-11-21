@@ -98,7 +98,7 @@ If yours differs, `make_stick.sh` says so and stops; build the stick without the
 
 ## Notes
 
-- Kernel flags are `cpus=1 arch=i386`: one core and the 32-bit kernel. Edit `Extra/org.chameleon.Boot.plist`
+- Kernel flag on the installed system is `arch=i386` (32-bit kernel), both cores enabled. Edit `Extra/org.chameleon.Boot.plist`
   on the installed system to change them.
 - Apple's `AppleIntelCPUPowerManagement` kext is moved to `/Extra/disabled_kexts` on the installed system.
 - Known gaps: headphone-jack switching, fingerprint reader, internal Wi-Fi (Intel 3945ABG), microphone.
