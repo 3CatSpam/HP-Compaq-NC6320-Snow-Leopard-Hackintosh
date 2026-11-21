@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Source Code</key>
+	<string>https://github.com/RehabMan/OS-X-ACPI-Battery-Driver</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.0, Copyright 2011 Apple Inc., RehabMan 2012</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>ACPIBatteryManager</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.rehabman.driver.ACPIBatteryManager</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>ACPI Battery Manager</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.rehabman.driver.ACPIBatteryManager</string>
+			<key>IOClass</key>
+			<string>AppleSmartBatteryManager</string>
+			<key>IONameMatch</key>
+			<string>PNP0C0A</string>
+			<key>IOProviderClass</key>
+			<string>IOACPIPlatformDevice</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
+			<key>Configuration</key>
+			<dict>
+				<key>UseExtendedBatteryInformationMethod</key>
+				<true/>
+				<key>UseExtraBatteryInformationMethod</key>
+				<true/>
+				<key>EstimateCycleCountDivisor</key>
+				<integer>6</integer>
+				<key>UseDesignVoltageForDesignCapacity</key>
+				<true/>
+				<key>UseDesignVoltageForMaxCapacity</key>
+				<true/>
+				<key>UseDesignVoltageForCurrentCapacity</key>
+				<true/>
+				<key>CurrentDischargeRateMax</key>
+				<integer>20000</integer>
+				<key>CorrectCorruptCapacities</key>
+				<true/>
+				<key>Correct16bitSignedCurrentRate</key>
+				<true/>
+				<key>StartupDelay</key>
+				<integer>0</integer>
+				<key>FirstPollDelay</key>
+				<integer>4000</integer>
+			</dict>
+		</dict>
+		<key>ACPI AC Adapter</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.rehabman.driver.ACPIBatteryManager</string>
+			<key>IOClass</key>
+			<string>ACPIACAdapter</string>
+			<key>IOProviderClass</key>
+			<string>IOACPIPlatformDevice</string>
+			<key>IONameMatch</key>
+			<string>ACPI0003</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2011 Apple Inc. All rights reserved, RehabMan 2012</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOACPIFamily</key>
+		<string>1.0d1</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>9.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>9.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>
