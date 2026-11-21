@@ -90,6 +90,10 @@ Extra/tls/securityd
 Extra/tls/ssl_anchors.pem     (optional: the root certificates, a PEM bundle)
 ```
 
+**Building them yourself:** on a Mac OS X 10.6.8 machine with Xcode 4.1, download the project as a ZIP on another computer,
+copy it over and run `bash build_tls.sh /path/to/tls12-snow-leopard-merge`. It builds the pair and fills `Extra/tls/`.
+It does not install anything on that machine. The project is large and replaces a core system framework, so use a machine you can restore.
+
 `make_stick.sh` applies `security_tea.patch` to `Security` (it fixes an endless loop in the certificate check)
 and the installer puts the pair on the new system. Without an `Extra/tls/` folder the stick is built without TLS 1.2.
 
